@@ -417,8 +417,20 @@ a.icon {
     font-size: 3rem;
 }
 
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 1.8rem;
+    }
+}
+
 #header h3 {
     font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    #header h3 {
+        font-size: 0.8rem;
+    }
 }
 
 .header-one .header-thumb,
