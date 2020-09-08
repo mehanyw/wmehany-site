@@ -201,12 +201,20 @@ nav ul.right {
     right: 0
 }
 
+#nav-menu {
+    padding-left: 0;
+}
+
 #nav-menu a {
     font-weight: 300;
     font-size: 26px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
+}
+
+#nav-menu a:hover {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #nav-menu li {
@@ -449,6 +457,15 @@ a.icon {
     padding-top: 45px !important;
 }
 
+@media (max-width: 360px) {
+
+    .header-one, .header-two,
+    .header-three, .header-four,
+    .header-five {
+        height: 20vh !important;
+    }
+}
+
 /* Portfolio section styles
 /* ========================================== */
 #portfolio {
@@ -488,7 +505,13 @@ a.icon {
 
 #portfolio .portfolio-thumb .portfolio-overlay .portfolio-item {
     text-align: center;
-    padding: 30% 20px 20px;
+    padding: 40% 20px 20px;
+    display: block;
+}
+
+#portfolio .portfolio-thumb .portfolio-overlay .portfolio-item h3 {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: none;
 }
 
 #portfolio .portfolio-thumb .portfolio-overlay .fa {
@@ -591,8 +614,66 @@ a.icon {
     padding-bottom: 10px;
 }
 
-#single-project img {
-    padding-top: 14px;
+#single-project .project-pictures {
+    padding: 0;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#single-project .project-pictures-apps {
+    padding: 0 40px 0 40px;
+    margin-top: 20px;
+    box-shadow: none;
+    border-radius: 100px;
+}
+
+#single-project .button {
+    display: block;
+    background-color: white;
+    margin: 4rem auto 0px auto;
+    padding: 15px 32px;
+    color: rgba(1, 1, 1, 1);
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+}
+
+#single-project .button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+#single-project button:focus {
+    outline: 0;
+}
+
+#single-project .project-link p {
+    display: block;
+    margin: 4rem auto 0px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#single-project .project-link h3 {
+    display: block;
+    margin: 4rem auto 0px auto;
+    color: rgba(1, 1, 1, 1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+#single-project .project-link i {
+    margin: 4rem 1rem 0 1rem;
+    font-size: 18px;
 }
 
 /* about section styles
@@ -708,6 +789,7 @@ a.icon {
 /* contact section styles
 /* ========================================== */
 #contact {
+    text-align: center;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -724,9 +806,26 @@ a.icon {
     /* bottom: -50px; */
 }
 
+#contact .contact-social i {
+    color: black;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 3.5rem;
+}
+
+#contact .contact-social i:hover {
+    color: #777;
+}
+
+#contact .contact-social a:hover {
+    color: #777;
+    transform: scale(2);
+}
+
 /* footer section styles
 /* ========================================== */
 footer {
+    /* background: white; */
     background: #141414;
     padding-top: 120px;
     padding-bottom: 120px;
@@ -734,20 +833,20 @@ footer {
 }
 
 /* social icon */
-.social-icon {
+.social {
+    /* background: blue; */
     padding: 0;
     margin: 0;
 }
 
-.social-icon li {
-    list-style: none;
+.social {
     display: inline-block;
 }
 
-.social-icon li a {
+.social i {
     border-radius: 100px;
     border: 1px solid transparent;
-    color: #909090;
+    color: #777;
     font-size: 18px;
     width: 50px;
     height: 50px;
@@ -755,7 +854,7 @@ footer {
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
     padding: 0px;
     margin-top: 14px;
     margin-right: 8px;
@@ -764,8 +863,9 @@ footer {
     top: 0px;
 }
 
-.social-icon li a:hover {
-    background: #ffffff;
+.social i:hover {
+    transform: scale(1.1);
+    color: white;
 }
 
 /* Responsive Mobile styles
